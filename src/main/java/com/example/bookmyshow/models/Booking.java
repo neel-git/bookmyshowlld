@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 public class Booking extends BaseModel{
     @ManyToOne
-    private  User user;
+    private  User bookedBy;
 
     @OneToMany
     private List<ShowSeat> showSeats;
@@ -27,7 +27,7 @@ public class Booking extends BaseModel{
 }
 
 /*
-1              1
+ 1              1
  Booking ----- User
   M             1
 
